@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* Function to load page */
     function loadPage(page) {
-        fetch(`/${page}.html?timestamp=${new Date().getTime()}`).then((response) => {
+        fetch(`content/${page}.html?timestamp=${new Date().getTime()}`).then((response) => {
             if (!response.ok) {
                 throw new Error('Page not found.');
             }
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             const page = e.target.getAttribute('data-page');
             
-            history.pushState({ page }, '', page === 'home' ? '/' : `/${page}`);
+            history.pushState({ page }, '', page === 'home' ? '/' : `content/${page}`);
             loadPage(page);
         })
     })
