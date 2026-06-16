@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             const page = e.target.getAttribute('data-page');
             
-            history.pushState({ page }, '', page === 'home' ? '/' : `content/${page}`);
+            history.pushState({ page }, '', page === 'home' ? '/' : `/${page}`);
             loadPage(page);
         })
     })
