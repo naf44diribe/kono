@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* Function to load page */
     function loadPage(page) {
-        fetch(`content/${page}.html?timestamp=${new Date().getTime()}`).then((response) => {
+        fetch(`https://github.com/naf44diribe/kono/content/${page}.html?timestamp=${new Date().getTime()}`).then((response) => {
             if (!response.ok) {
                 throw new Error('Page not found.');
             }
